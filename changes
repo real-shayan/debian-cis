@@ -25,3 +25,6 @@ local key for protect files (not stored anywhere):
 Added Audit Configurations for ssh: 
 -a always,exit -F path=/usr/lib/openssh/ssh-keysign -F perm=x -F auid>=1000 -F auid!=4294967295 -k privileged
 -a always,exit -F path=/usr/bin/ssh-agent -F perm=x -F auid>=1000 -F auid!=4294967295 -k privileged
+
+* Changed /etc/sshd_config permission to 0600 for giving read/write access to owner
+* Set Protocol Version to "2" instead of "1" for security reasons
