@@ -37,3 +37,8 @@ Added Audit Configurations for ssh:
 * PermitEmptyPasswords: No
 * Disabled Agent Forwarding
 * Host based authentication: No
+
+
+# Hosts Hardening:
+#
+Added ALL: ALL to /etc/hosts.deny for denying anything xD
