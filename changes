@@ -71,3 +71,13 @@ modprobe.d:
 
 minlen +14
 dcredit, ucredit, ocredit, lcredit to -1 
+
+# Audit Policies:
+# /etc/audit/audit.conf
+admin_space_left_action = halt
+space_left_action = email
+max_log_file_action = keep_logs
+
+
+# /etc/journald
+Storage=Persistant
