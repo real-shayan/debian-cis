@@ -1,4 +1,10 @@
 # Changes
 
-# File System Hardening: 
-disabled 'hfs, freevxfs, jffs2, hfsplus, squashfs & udf' filesystems from the prebuilt kernel
+# File System Hardening
+disabled 'hfs, freevxfs, jffs2, hfsplus, squashfs & udf' filesystems from the prebuilt kernel 
+enabled "noexec" options of /dev/shm, for prevent attackers to execute on tmpfs
+added "nodev" option to removable devices for prevent user rights to sensitive device files
+disabled usb-storage from the kernel
+
+# sudoers:
+specified /var/log/sudo.log as sudo's logfile 
