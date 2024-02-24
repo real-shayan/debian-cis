@@ -8,3 +8,13 @@ disabled usb-storage from the kernel
 
 # sudoers:
 specified /var/log/sudo.log as sudo's logfile 
+
+# installed missing packages: 
+tripwire auditd syslog-ng libpam-pwquality tcpd
+
+# Tripwire Hardening: 
+Site-key: 
+1234
+
+local key for protect files (not stored anywhere):
+12345678 
