@@ -42,3 +42,7 @@ Added Audit Configurations for ssh:
 # Hosts Hardening:
 #
 Added ALL: ALL to /etc/hosts.deny for denying anything xD
+
+
+# SGID Permission 
+chmod u+s /usr/bin/write /usr/lib/mc/cons.saver /usr/lib/x86_64-linux-gnu/utempter/utempter /usr/bin/fusermount3 /usr/lib/dbus-1.0/dbus-daemon-launch-helper /usr/sbin/exim4
