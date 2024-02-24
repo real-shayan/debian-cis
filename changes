@@ -60,5 +60,9 @@ PASS_MAX_DAYS 90
 # Added Security Limits.conf 
 *               hard     core            0
 
-# Disabled DCCP (Datagram Congestion Control Protocol) 
+# Disabled DCCP, SCTP, RDS, TIPC (Datagram Congestion Control Protocol) 
+modprobe.d:
 "install dccp /bin/true"
+"install sctp /bin/true"
+"install rds /bin/true"
+"install tipc /bin/true"
