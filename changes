@@ -6,7 +6,7 @@ enabled "noexec" options of /dev/shm, for prevent attackers to execute on tmpfs
 added "nodev" option to removable devices for prevent user rights to sensitive device files
 disabled usb-storage from the kernel
 
-# sudoers:
+# sudoers hardening :
 specified /var/log/sudo.log as sudo's logfile 
 
 # installed missing packages: 
@@ -15,6 +15,13 @@ tripwire auditd syslog-ng libpam-pwquality tcpd
 # Tripwire Hardening: 
 Site-key: 
 1234
-
 local key for protect files (not stored anywhere):
-12345678 
+12345678
+* added tripwire --check to crontab for checking the trip file on each boot 
+
+# SSH Hardening 
+#
+#
+Added Audit Configurations for ssh: 
+-a always,exit -F path=/usr/lib/openssh/ssh-keysign -F perm=x -F auid>=1000 -F auid!=4294967295 -k privileged
+-a always,exit -F path=/usr/bin/ssh-agent -F perm=x -F auid>=1000 -F auid!=4294967295 -k privileged
