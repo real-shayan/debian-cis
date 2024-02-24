@@ -28,3 +28,12 @@ Added Audit Configurations for ssh:
 
 * Changed /etc/sshd_config permission to 0600 for giving read/write access to owner
 * Set Protocol Version to "2" instead of "1" for security reasons
+* Set Log Level to Info
+* Disabled X11 forwarding
+* Max Auth Try: 4
+* PermitUserEnvironment: No
+* PermitRootLogin: No 
+* HostBasedAuth: No
+* PermitEmptyPasswords: No
+* Disabled Agent Forwarding
+* Host based authentication: No
