@@ -66,3 +66,8 @@ modprobe.d:
 "install sctp /bin/true"
 "install rds /bin/true"
 "install tipc /bin/true"
+
+# Pwquality policies (/etc/security/pwquality.conf):
+
+minlen +14
+dcredit, ucredit, ocredit, lcredit to -1 
