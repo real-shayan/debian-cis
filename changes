@@ -1,2 +1,4 @@
-# Initial Changes
+# Changes
 
+# File System Hardening: 
+disabled 'hfs, freevxfs, jffs2, hfsplus, squashfs & udf' filesystems from the prebuilt kernel
