@@ -52,3 +52,10 @@ chmod u+s /usr/bin/write /usr/lib/mc/cons.saver /usr/lib/x86_64-linux-gnu/utempt
 #
 # PAM Modules Hardening: 
 restricted su auth 
+
+# Min & Max Change Password Policy in /etc/login.defs:
+PASS_MIN_DAYS 7
+PASS_MAX_DAYS 90
+
+# Added Security Limits.conf 
+*               hard     core            0
